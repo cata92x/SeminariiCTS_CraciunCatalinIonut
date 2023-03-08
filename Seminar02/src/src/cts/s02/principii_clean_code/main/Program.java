@@ -15,10 +15,15 @@ public class Program {
         try {
             AplicantReader aplicantReader = new AngajatReader();
             listaAngajati = aplicantReader.readAplicants("angajati.txt");
-            for (Aplicant aplicant : listaAngajati)
+            for (Aplicant aplicant : listaAngajati) {
                 System.out.println(aplicant.toString());
+                aplicant.afisareFinantare();
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+
     }
 }
